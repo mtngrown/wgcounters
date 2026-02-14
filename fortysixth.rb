@@ -8,23 +8,27 @@ require_relative 'us_background'
 class Fortysixth < Counter
   include UsBackground
 
-  # Main silhouette path from potrace (simplified for now - full path is very long)
-  # TODO: Extract full path data from original/46_INF_RGT_DUI.svg
-  # For now, we'll use a placeholder approach
+  # Using embedded JPEG approach since bitmap-to-vector tracing
+  # produces poor quality results for complex insignia
+  # TODO: Manually trace the 46th Infantry insignia to create proper vector paths
+  #       - Shield outline with proper curves
+  #       - Canton with Roman numeral X and crosses
+  #       - Five-pointed star
+  #       - Torch with flame details
+  #       - Color layers: blue field (#003087), gold elements (#FFD700), white canton
+  # TODO: Replace with proper vector art when available
 
   def forty_sixth_insignia(xml)
-    # Read and render the traced SVG paths
-    # For simplicity, embedding the SVG group directly
-    doc = File.open('original/46_INF_RGT_DUI.svg') { |f| Nokogiri::XML(f) }
-
-    # Extract all path elements from the source SVG
-    doc.xpath('//xmlns:path').each do |path|
-      xml.path(
-        d: path['d'],
-        fill: '#000000',  # Start with black silhouette
-        style: 'fill-opacity:1;stroke:none'
-      )
-    end
+    # Embed the original JPG image
+    # Source dimensions: 836x1042 px
+    xml.image(
+      'xlink:href': '../original/46_INF_RGT_DUI.jpg',
+      x: '0',
+      y: '0',
+      width: '836',
+      height: '1042',
+      preserveAspectRatio: 'xMidYMid meet'
+    )
   end
 
   def build_counter(xml)
@@ -33,16 +37,21 @@ class Fortysixth < Counter
       bounding_box(xml)
     end
     # Scale and position the insignia
-    # Source is 1672x2084 pt, target counter is 1024x1024
-    # Scale factor: ~0.4 to fit nicely
-    xml.g(transform: 'translate(200,100) scale(0.04)') do
+    # Source JPG is 836x1042 px, target counter is 1024x1024
+    # Scale to fit with margins: ~0.9 scale factor
+    xml.g(transform: 'translate(100,0) scale(0.9)') do
       forty_sixth_insignia(xml)
     end
   end
 
   def to_svg
     builder = Nokogiri::XML::Builder.new do |xml|
-      xml.svg(xmlns: 'http://www.w3.org/2000/svg', width: counter_width, height: counter_height) do
+      xml.svg(
+        xmlns: 'http://www.w3.org/2000/svg',
+        'xmlns:xlink': 'http://www.w3.org/1999/xlink',
+        width: counter_width,
+        height: counter_height
+      ) do
         build_counter(xml)
       end
     end
