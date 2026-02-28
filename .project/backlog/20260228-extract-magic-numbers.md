@@ -12,7 +12,7 @@ owner: dave
 created: 2026-02-28
 updated: 2026-02-28
 parent: null
-depends_on: []
+depends_on: [BL-0008]
 area: counter-layout
 adr_refs: []
 links: []
@@ -34,6 +34,8 @@ All layout-related numeric literals in `Counter` are extracted to named constant
 - [ ] Font size is a named constant
 - [ ] Counter dimensions (1024x1024) remain as methods but are referenced consistently
 - [ ] Generated SVGs are identical before and after
+- [ ] Existing specs continue to pass (47 examples, 0 failures)
+- [ ] Add specs for any new constants/methods introduced
 
 ## Notes
 
@@ -48,7 +50,7 @@ Subclass-specific magic numbers (e.g., `translate(277,207) scale(2.0)` in Blackh
 
 ## LLM Context
 
-- Files likely affected: counter.rb (primary), possibly blackhorse.rb, first_cav.rb, fortysixth.rb
+- Files likely affected: lib/wgcounters/counter.rb (primary), possibly lib/wgcounters/blackhorse.rb, first_cav.rb, fortysixth.rb; spec/counter_spec.rb (updates)
 - Invariants to preserve: all generated SVG output must be identical
 - Style constraints: use class-level constants (ALL_CAPS), keep `def method = value` for computed values
 - Known traps: some values may be interdependent (bounding box x + width = 964, which relates to counter_width 1024); extracting constants should make these relationships visible, not hide them
