@@ -25,29 +25,26 @@ The project has zero tests. Refactoring tasks (BL-0001 through BL-0004) and new 
 
 ## Outcome
 
-A test suite exists that verifies counter generation produces correct SVG output. Developers can run `bundle exec rspec` (or `rake test`) and know whether changes broke anything.
+A test suite exists that verifies counter generation produces correct SVG output. Developers can run `bundle exec rake spec` and know whether changes broke anything.
 
 ## Acceptance Criteria
 
-- [ ] Test framework chosen and configured (RSpec or Minitest)
-- [ ] Test directory structure created (`spec/` or `test/`)
+- [ ] Test framework chosen and configured (RSpec)
+- [ ] Test directory structure created (`spec/`)
 - [ ] Base Counter class has unit tests
 - [ ] Each counter subclass (Blackhorse, FirstCav, Fortysixth) has tests verifying SVG output
 - [ ] Counter sheet generators have tests
 - [ ] Background module behavior is tested
-- [ ] Tests runnable via single command (`bundle exec rspec` or `rake test`)
+- [ ] Tests runnable via single command (`bundle exec rake spec`)
+- [ ] Line and branch coverage is reported (SimpleCov)
 - [ ] Test helper/support files established for common SVG assertions
 
-### Potential child items
+### Child items (implementation order)
 
-This epic may be broken into discrete tasks as work progresses:
-
-- Test framework setup and configuration
-- Counter base class unit tests
-- Subclass SVG output tests (snapshot or structural)
-- Counter sheet layout tests
-- Background color module tests
-- SVG assertion helpers (e.g., parse output, check for expected elements/attributes)
+1. **BL-0011** — Set up RSpec, SimpleCov, and SVG matchers (foundation)
+2. **BL-0012** — Test Counter base class and background modules (depends on BL-0011)
+3. **BL-0013** — Test counter subclass SVG output (depends on BL-0011, parallel with BL-0012)
+4. **BL-0014** — Drive full test coverage (depends on BL-0012 + BL-0013)
 
 ## Notes
 
@@ -61,14 +58,11 @@ This epic may be broken into discrete tasks as work progresses:
 
 ### Framework choice
 
-- **RSpec**: More expressive, widely used, good matchers. Heavier dependency.
-- **Minitest**: Ships with Ruby, lighter, sufficient for this scope.
-
-Either works; defer to owner preference.
+**RSpec** chosen. More expressive matchers, widely used, supports custom matcher DSL for SVG assertions.
 
 ## LLM Context
 
-- Files likely affected: Gemfile, Rakefile, new spec/ or test/ directory, possibly a test helper
+- Files likely affected: Gemfile, Rakefile, new spec/ directory, .rspec
 - Invariants to preserve: tests should not modify generated/ output files
 - Style constraints: match existing Ruby conventions (frozen string literals, etc.)
 - Known traps: fortysixth.rb uses an embedded JPG with a relative path — tests may need to run from project root or handle path resolution
