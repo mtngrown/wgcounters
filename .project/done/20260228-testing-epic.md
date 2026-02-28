@@ -2,7 +2,7 @@
 id: BL-0008
 title: Establish testing infrastructure and coverage
 type: epic
-status: backlog
+status: done
 value: 5
 effort: 4
 urgency: 2
@@ -11,6 +11,7 @@ score: null
 owner: dave
 created: 2026-02-28
 updated: 2026-02-28
+completed: 2026-02-28
 parent: null
 depends_on: []
 area: testing
@@ -29,22 +30,22 @@ A test suite exists that verifies counter generation produces correct SVG output
 
 ## Acceptance Criteria
 
-- [ ] Test framework chosen and configured (RSpec)
-- [ ] Test directory structure created (`spec/`)
-- [ ] Base Counter class has unit tests
-- [ ] Each counter subclass (Blackhorse, FirstCav, Fortysixth) has tests verifying SVG output
-- [ ] Counter sheet generators have tests
-- [ ] Background module behavior is tested
-- [ ] Tests runnable via single command (`bundle exec rake spec`)
-- [ ] Line and branch coverage is reported (SimpleCov)
-- [ ] Test helper/support files established for common SVG assertions
+- [x] Test framework chosen and configured (RSpec)
+- [x] Test directory structure created (`spec/`)
+- [x] Base Counter class has unit tests
+- [x] Each counter subclass (Blackhorse, FirstCav, Fortysixth) has tests verifying SVG output
+- [x] Counter sheet generators have tests
+- [x] Background module behavior is tested
+- [x] Tests runnable via single command (`bundle exec rake spec`)
+- [x] Line and branch coverage is reported (SimpleCov, 100% line, thresholds enforced)
+- [x] Test helper/support files established for common SVG assertions
 
 ### Child items (implementation order)
 
-1. **BL-0011** — Set up RSpec, SimpleCov, and SVG matchers (foundation)
-2. **BL-0012** — Test Counter base class and background modules (depends on BL-0011)
-3. **BL-0013** — Test counter subclass SVG output (depends on BL-0011, parallel with BL-0012)
-4. **BL-0014** — Drive full test coverage (depends on BL-0012 + BL-0013)
+1. **BL-0011** — Set up RSpec, SimpleCov, and SVG matchers (done)
+2. **BL-0012** — Test Counter base class and background modules (done)
+3. **BL-0013** — Test counter subclass SVG output (done)
+4. **BL-0014** — Drive full test coverage (done)
 
 ## Notes
 

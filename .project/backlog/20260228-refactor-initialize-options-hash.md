@@ -12,7 +12,7 @@ owner: dave
 created: 2026-02-28
 updated: 2026-02-28
 parent: null
-depends_on: []
+depends_on: [BL-0008]
 area: counter-api
 adr_refs: []
 links: []

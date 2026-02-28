@@ -2,7 +2,7 @@
 id: BL-0014
 title: Drive full test coverage
 type: task
-status: backlog
+status: done
 value: 3
 effort: 2
 urgency: 1
@@ -11,6 +11,7 @@ score: null
 owner: dave
 created: 2026-02-28
 updated: 2026-02-28
+completed: 2026-02-28
 parent: BL-0008
 depends_on: [BL-0012, BL-0013]
 area: testing
@@ -29,11 +30,12 @@ SimpleCov reports full line and branch coverage. Any remaining uncovered code is
 
 ## Acceptance Criteria
 
-- [ ] SimpleCov report reviewed after BL-0012 and BL-0013 are complete
-- [ ] All uncovered lines identified and tests added
-- [ ] Branch coverage gaps addressed (conditional paths, error handling)
-- [ ] Coverage thresholds configured in SimpleCov (fail build if coverage drops)
-- [ ] Final `bundle exec rake spec` passes with full coverage
+- [x] SimpleCov report reviewed after BL-0012 and BL-0013 are complete
+- [x] All uncovered lines identified — already at 100% from BL-0012/BL-0013
+- [x] Branch coverage gaps addressed (no conditional branches in codebase)
+- [x] Coverage thresholds configured: `minimum_coverage line: 100, branch: 100`
+- [x] Final `bundle exec rake spec` passes with full coverage (47 examples, 0 failures)
+- [x] Refactoring tickets BL-0001/0002/0003/0004 updated with `depends_on: [BL-0008]`
 
 ## Notes
 
