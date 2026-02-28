@@ -41,6 +41,6 @@ No alternate formats are permitted.
 
 ## Enforcement
 
-Agents must read `AGENTS.md` before interacting with this directory.
+Agents must read `AGENT.md` before interacting with this directory.
 Humans are responsible for approving structural changes.
 

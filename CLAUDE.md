@@ -10,14 +10,20 @@ This Ruby project generates SVG-based counters for conflict simulation wargames.
 
 ```
 wgcounters/
-├── counter.rb              # Base Counter class with common rendering logic
-├── background_fill.rb      # Abstract module for background colors
-├── us_background.rb        # US Army unit background colors
-├── nv_background.rb        # North Vietnamese unit background colors
-├── blackhorse.rb          # 11th ACR Blackhorse counter (executable)
-├── blackhorse_counter_sheet.rb  # Sheet generator (executable)
-├── original/              # Source SVG assets (unit insignia)
-└── generated/             # Output SVG files
+├── counter.rb                    # Base Counter class with common rendering logic
+├── background_fill.rb            # Abstract module for background colors
+├── us_background.rb              # US Army unit background colors
+├── nv_background.rb              # North Vietnamese unit background colors
+├── blackhorse.rb                 # 11th ACR Blackhorse counter (executable)
+├── blackhorse_counter_sheet.rb   # Sheet generator (executable)
+├── first_cav.rb                  # 1st Cavalry Division counter (executable)
+├── first_cav_counter_sheet.rb    # Sheet generator (executable)
+├── fortysixth.rb                 # 46th Infantry Regiment counter (executable)
+├── fortysixth_counter_sheet.rb   # Sheet generator (executable)
+├── AGENT.md                      # Agent instructions for project management
+├── .project/                     # Project management (backlog, done, ADRs, docs)
+├── original/                     # Source SVG/JPG assets (unit insignia)
+└── generated/                    # Output SVG files
 ```
 
 ### Design Patterns
@@ -88,9 +94,10 @@ end
 
 ### Commit Messages
 - Use detailed, descriptive commit messages that explain the "why" not just the "what"
-- Include co-authorship line when working with Claude:
+- Include co-authorship line when working with Claude (use the model in the current session):
   ```
   Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+  Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
   ```
 - Prefer reviewing proposed commit messages before committing
 
@@ -169,22 +176,30 @@ From code comments (tracked in `.project/backlog/`):
 # Install dependencies
 bundle install
 
-# Generate individual counter
+# Generate individual counters
 bundle exec ruby blackhorse.rb
+bundle exec ruby first_cav.rb
+bundle exec ruby fortysixth.rb
 
-# Generate counter sheet (80 counters)
+# Generate counter sheets (80 counters each)
 bundle exec ruby blackhorse_counter_sheet.rb
+bundle exec ruby first_cav_counter_sheet.rb
+bundle exec ruby fortysixth_counter_sheet.rb
 
 # Output files in generated/
 ls -lh generated/
 ```
 
+## Existing Counters
+
+- **11th ACR (Blackhorse)** — SVG vector paths, 4 layers (outer, white, red stripe, details)
+- **1st Cavalry Division** — SVG vector paths, 4 layers (outer, inner gold, black stripe, horse)
+- **46th Infantry Regiment** — Embedded JPG (vector tracing pending, see BL-0005)
+
 ## Future Expansion
 
 Potential counter types based on available assets:
-- 1st Cavalry Division counters
-- 46th Infantry Regiment counters
-- Vietnamese Rangers (ARVN) counters
+- Vietnamese Rangers (ARVN) counters (`original/Vietnamese_Rangers_SSI.svg`)
 - PAVN/NVA counters for enemy forces
 - Status markers (supply, fatigue, morale, etc.)
 
