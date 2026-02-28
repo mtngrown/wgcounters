@@ -2,7 +2,7 @@
 id: BL-0013
 title: Test counter subclass SVG output
 type: story
-status: backlog
+status: done
 value: 4
 effort: 2
 urgency: 2
@@ -11,6 +11,7 @@ score: null
 owner: dave
 created: 2026-02-28
 updated: 2026-02-28
+completed: 2026-02-28
 parent: BL-0008
 depends_on: [BL-0011]
 area: testing
@@ -29,13 +30,13 @@ Each counter subclass has specs covering both `to_svg` (individual counter) and 
 
 ## Acceptance Criteria
 
-- [ ] Blackhorse `to_svg` tested: SVG root dimensions, OG-107 background rect, 4 insignia paths present, correct transform
-- [ ] Blackhorse `counter_sheet_svg` tested: SVG root 1000x800, 80 counter groups rendered
-- [ ] FirstCav `to_svg` tested: SVG root dimensions, OG-107 background rect, 4 insignia paths present, correct transform
-- [ ] FirstCav `counter_sheet_svg` tested: SVG root 1000x800, 80 counter groups rendered
-- [ ] Fortysixth `to_svg` tested: SVG root dimensions, OG-107 background rect, embedded image element present, xlink namespace
-- [ ] Fortysixth `counter_sheet_svg` tested: SVG root 1000x800, 80 counter groups rendered, xlink namespace
-- [ ] All tests pass via `bundle exec rake spec`
+- [x] Blackhorse `to_svg` tested: SVG root dimensions, OG-107 background rect, 4 insignia paths present, correct transform
+- [x] Blackhorse `counter_sheet_svg` tested: SVG root 1000x800, 80 counters rendered
+- [x] FirstCav `to_svg` tested: SVG root dimensions, OG-107 background rect, 4 insignia paths present, correct transform
+- [x] FirstCav `counter_sheet_svg` tested: SVG root 1000x800, 80 counters rendered
+- [x] Fortysixth `to_svg` tested: SVG root dimensions, OG-107 background rect, embedded image element present, xlink namespace
+- [x] Fortysixth `counter_sheet_svg` tested: SVG root 1000x800, 80 counters rendered, xlink namespace
+- [x] All tests pass via `bundle exec rake spec` (47 examples, 0 failures)
 
 ## Notes
 
