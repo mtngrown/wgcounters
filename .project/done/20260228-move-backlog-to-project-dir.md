@@ -2,7 +2,7 @@
 id: BL-0009
 title: Move backlog/ under .project/ directory
 type: task
-status: backlog
+status: done
 value: 2
 effort: 1
 urgency: 1
@@ -11,6 +11,7 @@ score: null
 owner: dave
 created: 2026-02-28
 updated: 2026-02-28
+completed: 2026-02-28
 parent: null
 depends_on: []
 area: project-management

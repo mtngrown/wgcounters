@@ -2,7 +2,7 @@
 id: BL-0010
 title: Establish .project/ subdirectory structure
 type: task
-status: backlog
+status: done
 value: 2
 effort: 1
 urgency: 1
@@ -11,6 +11,7 @@ score: null
 owner: dave
 created: 2026-02-28
 updated: 2026-02-28
+completed: 2026-02-28
 parent: null
 depends_on: [BL-0009]
 area: project-management
