@@ -29,11 +29,13 @@ Project management artifacts (backlog, future ADRs, meeting notes, etc.) are cur
 
 ## Acceptance Criteria
 
-- [ ] `backlog/` moved to `.project/backlog/`
-- [ ] AGENT.md updated to reference new path (`.project/backlog/template.md`)
-- [ ] CLAUDE.md updated to reference new path
+- [ ] All backlog items `git mv`'d to `.project/backlog/`
+- [ ] template.md and README.md moved to `.project/backlog/`
+- [ ] AGENT.md updated to reference `.project/backlog/template.md`
+- [ ] CLAUDE.md updated to reference `.project/backlog/`
 - [ ] All backlog item cross-references still valid
 - [ ] Source code `TODO(BL-XXXX)` comments unchanged (they reference IDs, not paths)
+- [ ] Root `backlog/` directory removed
 - [ ] Git history preserved via `git mv`
 
 ## Notes
