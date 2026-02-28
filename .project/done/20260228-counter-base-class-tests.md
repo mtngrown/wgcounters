@@ -2,7 +2,7 @@
 id: BL-0012
 title: Test Counter base class and background modules
 type: story
-status: backlog
+status: done
 value: 4
 effort: 2
 urgency: 2
@@ -11,6 +11,7 @@ score: null
 owner: dave
 created: 2026-02-28
 updated: 2026-02-28
+completed: 2026-02-28
 parent: BL-0008
 depends_on: [BL-0011]
 area: testing
@@ -29,14 +30,14 @@ Unit tests exist for `Counter` base class behavior and all background modules. D
 
 ## Acceptance Criteria
 
-- [ ] `Counter` dimensions tested (counter_width, counter_height)
-- [ ] `Counter` rendering methods tested (counter_background, bounding_box produce correct SVG elements)
-- [ ] Offset calculations tested (offset_x, offset_y)
-- [ ] Text positioning methods tested (top_left_value, top_right_value)
-- [ ] `BackgroundFill` raises `NotImplementedError` when `color` not implemented
-- [ ] `UsBackground` returns correct OG-107 olive drab color
-- [ ] `NvBackground` returns correct light red color
-- [ ] All tests pass via `bundle exec rake spec`
+- [x] `Counter` dimensions tested (counter_width, counter_height)
+- [x] `Counter` rendering methods tested (counter_background, bounding_box produce correct SVG elements)
+- [x] Offset calculations tested (offset_x, offset_y)
+- [x] Text positioning methods tested (top_left_value, top_right_value)
+- [x] `BackgroundFill` raises `NotImplementedError` when `color` not implemented
+- [x] `UsBackground` returns correct OG-107 olive drab color
+- [x] `NvBackground` returns correct light red color
+- [x] All tests pass via `bundle exec rake spec` (17 examples, 0 failures)
 
 ## Notes
 
