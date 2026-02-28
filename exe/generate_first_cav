@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative '../lib/wgcounters'
+
+File.write('generated/first-cav-counter.svg', WGCounters::FirstCav.new.to_svg)
+File.write('generated/first-cav-counter-sheet.svg', WGCounters::FirstCav.counter_sheet_svg)

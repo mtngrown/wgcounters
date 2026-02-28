@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative '../lib/wgcounters'
+
+File.write('generated/blackhorse-counter.svg', WGCounters::Blackhorse.new.to_svg)
+File.write('generated/blackhorse-counter-sheet.svg', WGCounters::Blackhorse.counter_sheet_svg)

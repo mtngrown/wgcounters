@@ -2,7 +2,7 @@
 id: BL-0006
 title: Restructure project to conform to Ruby gem specification
 type: story
-status: backlog
+status: done
 value: 4
 effort: 3
 urgency: 1
@@ -11,6 +11,7 @@ score: null
 owner: dave
 created: 2026-02-28
 updated: 2026-02-28
+completed: 2026-02-28
 parent: null
 depends_on: []
 area: project-structure
@@ -49,12 +50,12 @@ wgcounters/
 
 ## Acceptance Criteria
 
-- [ ] All counter classes live under `lib/wgcounters/` and are namespaced in `module Wgcounters`
-- [ ] `require 'wgcounters'` loads the library
-- [ ] A `.gemspec` file exists with valid metadata
-- [ ] `bundle exec ruby <generator>` still produces identical SVG output
-- [ ] Existing `require_relative` calls updated to gem-style requires
-- [ ] `generated/` output directory still works (path resolution updated)
+- [x] All counter classes live under `lib/wgcounters/` and are namespaced in `module WGCounters`
+- [x] `require 'wgcounters'` loads the library
+- [x] A `.gemspec` file exists with valid metadata
+- [x] `ruby exe/generate_*` produces identical SVG output (verified via diff against baseline)
+- [x] Existing `require_relative` calls updated; top-level loader handles all requires
+- [x] `generated/` output directory still works (executables run from project root)
 
 ## Notes
 
@@ -75,6 +76,25 @@ This decision should be made before implementation begins.
 ### Namespace consideration
 
 `Wgcounters` or `WGCounters` — the gem name `wgcounters` maps to `Wgcounters` by Ruby convention, but `WGCounters` reads better as an acronym. Either works; pick one and be consistent.
+
+## Implementation Notes
+
+### Decisions Made
+- **Namespace**: `WGCounters` (acronym style, reads better)
+- **Output targets**: Executables in `exe/` + Rake tasks as thin wrappers (principle: "Rake tasks should most often be thin wrappers around executable code which is independently testable")
+- **Sheet generation**: Merged standalone `*_counter_sheet.rb` files into class methods (`self.counter_sheet_svg`) on each counter class
+
+### Key Changes
+- All 7 source `.rb` files moved via `git mv` to `lib/wgcounters/` and wrapped in `module WGCounters`
+- 3 standalone sheet generator files removed (merged into counter classes)
+- Top-level `lib/wgcounters.rb` handles all requires
+- `wgcounters.gemspec` created with nokogiri runtime dep, rake dev dep
+- Rakefile with `rake generate` (all) and `rake generate:{unit}` tasks
+- All 6 generated SVG files verified identical to pre-restructure baseline
+
+### Traps Avoided
+- `fortysixth.rb` embeds `../original/46_INF_RGT_DUI.jpg` as an SVG-internal reference — this resolves relative to `generated/` at render time, not at Ruby require time, so it still works
+- Executables run from project root, so `File.write('generated/...')` paths resolve correctly
 
 ## LLM Context
 

@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative '../lib/wgcounters'
+
+File.write('generated/fortysixth-counter.svg', WGCounters::Fortysixth.new.to_svg)
+File.write('generated/fortysixth-counter-sheet.svg', WGCounters::Fortysixth.counter_sheet_svg)
