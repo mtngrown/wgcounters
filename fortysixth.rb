@@ -10,13 +10,13 @@ class Fortysixth < Counter
 
   # Using embedded JPEG approach since bitmap-to-vector tracing
   # produces poor quality results for complex insignia
-  # TODO: Manually trace the 46th Infantry insignia to create proper vector paths
+  # TODO(BL-0005): Manually trace the 46th Infantry insignia to create proper vector paths
   #       - Shield outline with proper curves
   #       - Canton with Roman numeral X and crosses
   #       - Five-pointed star
   #       - Torch with flame details
   #       - Color layers: blue field (#003087), gold elements (#FFD700), white canton
-  # TODO: Replace with proper vector art when available
+  # TODO(BL-0005): Replace with proper vector art when available
 
   def forty_sixth_insignia(xml)
     # Embed the original JPG image

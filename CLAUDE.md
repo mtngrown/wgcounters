@@ -150,11 +150,12 @@ end
 
 ## TODOs and Known Issues
 
-From code comments:
-- [ ] Change counter `initialize` to accept options hash instead of single fill parameter
-- [ ] Refactor color definition - current approach of defining colors in separate modules is anti-pattern (consider refactoring)
-- [ ] Hardcoded offset calculations need proper formulas based on dimensions
-- [ ] Extract magic numbers to constants (offsets, dimensions, coordinates)
+From code comments (tracked in `backlog/`):
+- [ ] Change counter `initialize` to accept options hash instead of single fill parameter (BL-0001)
+- [ ] Refactor color definition - current approach of defining colors in separate modules is anti-pattern (BL-0002)
+- [ ] Hardcoded offset calculations need proper formulas based on dimensions (BL-0003)
+- [ ] Extract magic numbers to constants (offsets, dimensions, coordinates) (BL-0004)
+- [ ] Create proper vector paths for 46th Infantry insignia (BL-0005)
 
 ## Dependencies
 

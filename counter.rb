@@ -6,10 +6,10 @@ require 'nokogiri'
 class Counter
   def gray_index = 90
 
-  # TODO: change this to an options hash.
+  # TODO(BL-0001): change this to an options hash.
   # `color` is the background color which is currently
   # currently defined in a module. This smells like an
-  # anti-pattern, but I'm rolling with it for now.
+  # anti-pattern, but I'm rolling with it for now. (BL-0002)
   def initialize(fill = color)
     @fill = fill
   end
@@ -27,13 +27,13 @@ class Counter
     )
   end
 
-  # No idea why -80 is the correct (or close enoug) offset.
+  # TODO(BL-0003): No idea why -80 is the correct (or close enough) offset.
   # It needs to be calculated based on the counter width.
   def offset_x
     -80
   end
 
-  # This needs to be calculated based on the counter height
+  # TODO(BL-0003): This needs to be calculated based on the counter height
   def offset_y
     (1024 - 628) / 2
   end
