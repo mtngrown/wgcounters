@@ -6,7 +6,7 @@ This repository uses a structured backlog format for all work items.
 
 Before creating, modifying, or reprioritizing any backlog entry, you MUST read:
 
-    ./backlog/template.md
+    ./.project/backlog/template.md
 
 All backlog items must conform exactly to that template.
 

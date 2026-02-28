@@ -150,7 +150,7 @@ end
 
 ## TODOs and Known Issues
 
-From code comments (tracked in `backlog/`):
+From code comments (tracked in `.project/backlog/`):
 - [ ] Change counter `initialize` to accept options hash instead of single fill parameter (BL-0001)
 - [ ] Refactor color definition - current approach of defining colors in separate modules is anti-pattern (BL-0002)
 - [ ] Hardcoded offset calculations need proper formulas based on dimensions (BL-0003)
