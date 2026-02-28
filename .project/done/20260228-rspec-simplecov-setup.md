@@ -2,7 +2,7 @@
 id: BL-0011
 title: Set up RSpec, SimpleCov, and SVG matchers
 type: task
-status: backlog
+status: done
 value: 4
 effort: 2
 urgency: 2
@@ -11,6 +11,7 @@ score: null
 owner: dave
 created: 2026-02-28
 updated: 2026-02-28
+completed: 2026-02-28
 parent: BL-0008
 depends_on: []
 area: testing
@@ -29,13 +30,13 @@ All other testing work depends on having the framework wired up. RSpec is the ch
 
 ## Acceptance Criteria
 
-- [ ] RSpec added to gemspec as development dependency and configured (`.rspec`, `spec/spec_helper.rb`)
-- [ ] SimpleCov added and wired into spec_helper (generates `coverage/` report)
-- [ ] `coverage/` added to `.gitignore`
-- [ ] Rakefile updated: `rake spec` works, `rake` default runs specs
-- [ ] Custom SVG matchers/helpers in `spec/support/` for parsing SVG output and asserting elements
-- [ ] `bundle exec rake spec` passes with 0 examples, 0 failures
-- [ ] Minitest removed (replaced by RSpec)
+- [x] RSpec added to gemspec as development dependency and configured (`.rspec`, `spec/spec_helper.rb`)
+- [x] SimpleCov added and wired into spec_helper (generates `coverage/` report)
+- [x] `coverage/` added to `.gitignore`
+- [x] Rakefile updated: `rake spec` works, `rake` default runs specs
+- [x] Custom SVG matchers/helpers in `spec/support/` for parsing SVG output and asserting elements
+- [x] `bundle exec rake spec` passes with 0 examples, 0 failures
+- [x] Minitest removed (replaced by RSpec)
 
 ## Notes
 

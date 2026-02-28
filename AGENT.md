@@ -13,6 +13,8 @@ All backlog items must conform exactly to that template.
 If a proposed item does not fit the template, revise the proposal — do
 not alter the template without explicit human approval.
 
+General principle: implement a ticket, update as appropriate, mark it done, move it to done/
+
 This repository operates in assistive mode by default:
 
 - Propose changes.

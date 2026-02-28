@@ -1,13 +1,10 @@
 # frozen_string_literal: true
 
-require 'rake/testtask'
+require 'rspec/core/rake_task'
 
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
-end
+RSpec::Core::RakeTask.new(:spec)
 
-task default: :test
+task default: :spec
 
 desc 'Generate all counters and sheets'
 task :generate do
