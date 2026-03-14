@@ -1,5 +1,5 @@
 ---
-id: BL-0006
+id: WGC-0006
 title: Restructure project to conform to Ruby gem specification
 type: story
 status: done

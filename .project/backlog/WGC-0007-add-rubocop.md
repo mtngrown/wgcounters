@@ -1,5 +1,5 @@
 ---
-id: BL-0007
+id: WGC-0007
 title: Add Rubocop for static analysis and style enforcement
 type: task
 status: backlog

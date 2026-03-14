@@ -177,11 +177,11 @@ end
 ## TODOs and Known Issues
 
 From code comments (tracked in `.project/backlog/`):
-- [ ] Change counter `initialize` to accept options hash instead of single fill parameter (BL-0001)
-- [ ] Refactor color definition - current approach of defining colors in separate modules is anti-pattern (BL-0002)
-- [ ] Hardcoded offset calculations need proper formulas based on dimensions (BL-0003)
-- [ ] Extract magic numbers to constants (offsets, dimensions, coordinates) (BL-0004)
-- [ ] Create proper vector paths for 46th Infantry insignia (BL-0005)
+- [ ] Change counter `initialize` to accept options hash instead of single fill parameter (WGC-0015)
+- [ ] Refactor color definition - current approach of defining colors in separate modules is anti-pattern (WGC-0002)
+- [ ] Hardcoded offset calculations need proper formulas based on dimensions (WGC-0003)
+- [ ] Extract magic numbers to constants (offsets, dimensions, coordinates) (WGC-0004)
+- [ ] Create proper vector paths for 46th Infantry insignia (WGC-0005)
 
 ## Dependencies
 
@@ -217,7 +217,7 @@ ls -lh generated/
 
 - **11th ACR (Blackhorse)** — SVG vector paths, 4 layers (outer, white, red stripe, details)
 - **1st Cavalry Division** — SVG vector paths, 4 layers (outer, inner gold, black stripe, horse)
-- **46th Infantry Regiment** — Embedded JPG (vector tracing pending, see BL-0005)
+- **46th Infantry Regiment** — Embedded JPG (vector tracing pending, see WGC-0005)
 
 ## Future Expansion
 

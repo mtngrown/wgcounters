@@ -1,5 +1,5 @@
 ---
-id: BL-0009
+id: WGC-0009
 title: Move backlog/ under .project/ directory
 type: task
 status: done
@@ -35,7 +35,7 @@ Project management artifacts (backlog, future ADRs, meeting notes, etc.) are cur
 - [ ] AGENT.md updated to reference `.project/backlog/template.md`
 - [ ] CLAUDE.md updated to reference `.project/backlog/`
 - [ ] All backlog item cross-references still valid
-- [ ] Source code `TODO(BL-XXXX)` comments unchanged (they reference IDs, not paths)
+- [ ] Source code `TODO(WGC-XXXX)` comments unchanged (they reference IDs, not paths)
 - [ ] Root `backlog/` directory removed
 - [ ] Git history preserved via `git mv`
 

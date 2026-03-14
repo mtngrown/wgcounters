@@ -1,5 +1,5 @@
 ---
-id: BL-0011
+id: WGC-0011
 title: Set up RSpec, SimpleCov, and SVG matchers
 type: task
 status: done
@@ -12,7 +12,7 @@ owner: dave
 created: 2026-02-28
 updated: 2026-02-28
 completed: 2026-02-28
-parent: BL-0008
+parent: WGC-0008
 depends_on: []
 area: testing
 adr_refs: []
@@ -40,7 +40,7 @@ All other testing work depends on having the framework wired up. RSpec is the ch
 
 ## Notes
 
-### Implementation order (1 of 4 in BL-0008 epic)
+### Implementation order (1 of 4 in WGC-0008 epic)
 
 This is the first child of the testing epic. All subsequent test stories depend on this.
 

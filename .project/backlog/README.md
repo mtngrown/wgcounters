@@ -16,11 +16,11 @@ No alternate formats are permitted.
 2. Create a new file in this directory.
 3. Name the file:
 
-       YYYYMMDD-short-kebab-title.md
+       WGC-<####>-short-kebab-title.md
 
    Example:
 
-       20260228-ci-hardening.md
+       WGC-<####>-ci-hardening.md
 
 4. Fill in all required YAML fields.
 5. Do not remove sections from the template.

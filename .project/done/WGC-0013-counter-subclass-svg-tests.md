@@ -1,5 +1,5 @@
 ---
-id: BL-0013
+id: WGC-0013
 title: Test counter subclass SVG output
 type: story
 status: done
@@ -12,8 +12,8 @@ owner: dave
 created: 2026-02-28
 updated: 2026-02-28
 completed: 2026-02-28
-parent: BL-0008
-depends_on: [BL-0011]
+parent: WGC-0008
+depends_on: [WGC-0011]
 area: testing
 adr_refs: []
 links: []
@@ -40,9 +40,9 @@ Each counter subclass has specs covering both `to_svg` (individual counter) and 
 
 ## Notes
 
-### Implementation order (3 of 4 in BL-0008 epic)
+### Implementation order (3 of 4 in WGC-0008 epic)
 
-Third child. Depends on BL-0011 (framework setup). Independent of BL-0012 (base class tests) — both can be worked in parallel.
+Third child. Depends on WGC-0011 (framework setup). Independent of WGC-0012 (base class tests) — both can be worked in parallel.
 
 ### Testing approach
 
@@ -62,5 +62,5 @@ All three sheets share the same layout: 8 rows x 10 columns = 80 counters, each 
 
 - Files likely affected: spec/blackhorse_spec.rb (new), spec/first_cav_spec.rb (new), spec/fortysixth_spec.rb (new)
 - Invariants to preserve: tests should not write to generated/
-- Style constraints: frozen string literals, use SVG matchers from BL-0011
+- Style constraints: frozen string literals, use SVG matchers from WGC-0011
 - Known traps: Fortysixth embeds `../original/46_INF_RGT_DUI.jpg` — this is an SVG-internal reference, not a Ruby path. Tests parse the SVG string and check the attribute value, they don't need the image file to exist.

@@ -1,5 +1,5 @@
 ---
-id: BL-0008
+id: WGC-0008
 title: Establish testing infrastructure and coverage
 type: epic
 status: done
@@ -22,7 +22,7 @@ labels: [testing, infrastructure, epic]
 
 ## Why
 
-The project has zero tests. Refactoring tasks (BL-0001 through BL-0004) and new counter development both carry regression risk without automated verification. Tests are a prerequisite for confident refactoring and a safety net as the counter library grows.
+The project has zero tests. Refactoring tasks (WGC-0002 through WGC-0004, WGC-0015) and new counter development both carry regression risk without automated verification. Tests are a prerequisite for confident refactoring and a safety net as the counter library grows.
 
 ## Outcome
 
@@ -42,10 +42,10 @@ A test suite exists that verifies counter generation produces correct SVG output
 
 ### Child items (implementation order)
 
-1. **BL-0011** — Set up RSpec, SimpleCov, and SVG matchers (done)
-2. **BL-0012** — Test Counter base class and background modules (done)
-3. **BL-0013** — Test counter subclass SVG output (done)
-4. **BL-0014** — Drive full test coverage (done)
+1. **WGC-0011** — Set up RSpec, SimpleCov, and SVG matchers (done)
+2. **WGC-0012** — Test Counter base class and background modules (done)
+3. **WGC-0013** — Test counter subclass SVG output (done)
+4. **WGC-0014** — Drive full test coverage (done)
 
 ## Notes
 

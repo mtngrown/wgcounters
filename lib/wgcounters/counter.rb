@@ -7,10 +7,10 @@ module WGCounters
   class Counter
     def gray_index = 90
 
-    # TODO(BL-0001): change this to an options hash.
+    # TODO(WGC-0015): change this to an options hash.
     # `color` is the background color which is currently
     # currently defined in a module. This smells like an
-    # anti-pattern, but I'm rolling with it for now. (BL-0002)
+    # anti-pattern, but I'm rolling with it for now. (WGC-0002)
     def initialize(fill = color)
       @fill = fill
     end
@@ -28,13 +28,13 @@ module WGCounters
       )
     end
 
-    # TODO(BL-0003): No idea why -80 is the correct (or close enough) offset.
+    # TODO(WGC-0003): No idea why -80 is the correct (or close enough) offset.
     # It needs to be calculated based on the counter width.
     def offset_x
       -80
     end
 
-    # TODO(BL-0003): This needs to be calculated based on the counter height
+    # TODO(WGC-0003): This needs to be calculated based on the counter height
     def offset_y
       (1024 - 628) / 2
     end

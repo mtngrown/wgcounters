@@ -1,5 +1,5 @@
 ---
-id: BL-0001
+id: WGC-0015
 title: Refactor Counter initialize to accept options hash
 type: task
 status: backlog
@@ -12,7 +12,7 @@ owner: dave
 created: 2026-02-28
 updated: 2026-02-28
 parent: null
-depends_on: [BL-0008]
+depends_on: [WGC-0008]
 area: counter-api
 adr_refs: []
 links: []
@@ -44,7 +44,7 @@ Source comment at `counter.rb:9`:
 # anti-pattern, but I'm rolling with it for now.
 ```
 
-The color module concern is tracked separately in BL-0002.
+The color module concern is tracked separately in WGC-0002.
 
 ## LLM Context
 

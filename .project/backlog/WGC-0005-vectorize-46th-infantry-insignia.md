@@ -1,5 +1,5 @@
 ---
-id: BL-0005
+id: WGC-0005
 title: Create proper vector paths for 46th Infantry insignia
 type: task
 status: backlog

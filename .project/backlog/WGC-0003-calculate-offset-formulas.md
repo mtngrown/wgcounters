@@ -1,5 +1,5 @@
 ---
-id: BL-0003
+id: WGC-0003
 title: Derive offset calculations from counter dimensions
 type: task
 status: backlog
@@ -12,7 +12,7 @@ owner: dave
 created: 2026-02-28
 updated: 2026-02-28
 parent: null
-depends_on: [BL-0008]
+depends_on: [WGC-0008]
 area: counter-layout
 adr_refs: []
 links: []

@@ -1,5 +1,5 @@
 ---
-id: BL-0002
+id: WGC-0002
 title: Refactor background color module pattern
 type: task
 status: backlog
@@ -12,7 +12,7 @@ owner: dave
 created: 2026-02-28
 updated: 2026-02-28
 parent: null
-depends_on: [BL-0001, BL-0008]
+depends_on: [WGC-0015, WGC-0008]
 area: counter-api
 adr_refs: []
 links: []
@@ -25,7 +25,7 @@ Background colors are supplied via module mixins (`UsBackground`, `NvBackground`
 
 ## Outcome
 
-Colors are passed as data (e.g., via the options hash from BL-0001) rather than inherited through mixins. The `BackgroundFill`, `UsBackground`, and `NvBackground` modules are either removed or repurposed as simple color constant holders.
+Colors are passed as data (e.g., via the options hash from WGC-0015) rather than inherited through mixins. The `BackgroundFill`, `UsBackground`, and `NvBackground` modules are either removed or repurposed as simple color constant holders.
 
 ## Acceptance Criteria
 
@@ -43,7 +43,7 @@ Source comment at `counter.rb:10-12`:
 # anti-pattern, but I'm rolling with it for now.
 ```
 
-This depends on BL-0001 (options hash) being completed first, since the options hash provides the mechanism to pass colors as constructor arguments.
+This depends on WGC-0015 (options hash) being completed first, since the options hash provides the mechanism to pass colors as constructor arguments.
 
 Possible approaches:
 1. Simple constants hash: `COLORS = { us: 'rgb(106,92,64)', nv: 'rgb(253,191,191)' }`

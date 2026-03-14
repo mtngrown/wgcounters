@@ -1,5 +1,5 @@
 ---
-id: BL-0014
+id: WGC-0014
 title: Drive full test coverage
 type: task
 status: done
@@ -12,8 +12,8 @@ owner: dave
 created: 2026-02-28
 updated: 2026-02-28
 completed: 2026-02-28
-parent: BL-0008
-depends_on: [BL-0012, BL-0013]
+parent: WGC-0008
+depends_on: [WGC-0012, WGC-0013]
 area: testing
 adr_refs: []
 links: []
@@ -22,7 +22,7 @@ labels: [testing]
 
 ## Why
 
-BL-0012 and BL-0013 establish test coverage for the known surface area. This final pass reviews the SimpleCov report to find uncovered lines and branches, then fills the gaps. It's the cleanup pass that turns "we have tests" into "we have confidence."
+WGC-0012 and WGC-0013 establish test coverage for the known surface area. This final pass reviews the SimpleCov report to find uncovered lines and branches, then fills the gaps. It's the cleanup pass that turns "we have tests" into "we have confidence."
 
 ## Outcome
 
@@ -30,24 +30,24 @@ SimpleCov reports full line and branch coverage. Any remaining uncovered code is
 
 ## Acceptance Criteria
 
-- [x] SimpleCov report reviewed after BL-0012 and BL-0013 are complete
-- [x] All uncovered lines identified — already at 100% from BL-0012/BL-0013
+- [x] SimpleCov report reviewed after WGC-0012 and WGC-0013 are complete
+- [x] All uncovered lines identified — already at 100% from WGC-0012/WGC-0013
 - [x] Branch coverage gaps addressed (no conditional branches in codebase)
 - [x] Coverage thresholds configured: `minimum_coverage line: 100, branch: 100`
 - [x] Final `bundle exec rake spec` passes with full coverage (47 examples, 0 failures)
-- [x] Refactoring tickets BL-0001/0002/0003/0004 updated with `depends_on: [BL-0008]`
+- [x] Refactoring tickets WGC-0015/0002/0003/0004 updated with `depends_on: [WGC-0008]`
 
 ## Notes
 
-### Implementation order (4 of 4 in BL-0008 epic)
+### Implementation order (4 of 4 in WGC-0008 epic)
 
-Last child. Depends on both BL-0012 and BL-0013 being complete — this is a gap-filling pass, not greenfield.
+Last child. Depends on both WGC-0012 and WGC-0013 being complete — this is a gap-filling pass, not greenfield.
 
 ### Likely gaps
 
-Based on the current codebase, areas that BL-0012/BL-0013 might not fully cover:
+Based on the current codebase, areas that WGC-0012/WGC-0013 might not fully cover:
 
-- `BackgroundFill#color` raising `NotImplementedError` (may already be covered in BL-0012)
+- `BackgroundFill#color` raising `NotImplementedError` (may already be covered in WGC-0012)
 - `Counter#fill_color` and `Counter#gray_index` interaction
 - Edge cases in text positioning methods
 - `VERSION` constant

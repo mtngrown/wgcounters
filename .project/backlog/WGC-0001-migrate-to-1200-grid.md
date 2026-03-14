@@ -12,7 +12,7 @@ owner: dave
 created: 2026-03-14
 updated: 2026-03-14
 parent: null
-depends_on: [BL-0003, BL-0004]
+depends_on: [WGC-0003, WGC-0004]
 area: counter-layout
 adr_refs: []
 links: [COUNTER_DESIGN.md]
@@ -31,7 +31,7 @@ All counters render on a 1200×1200 coordinate system with integer-aligned geome
 
 - [ ] `Counter#counter_width` and `Counter#counter_height` return 1200
 - [ ] Bounding box dimensions recalculated for 1200 canvas (x, width, height)
-- [ ] `offset_x` and `offset_y` derived from counter dimensions (resolves BL-0003)
+- [ ] `offset_x` and `offset_y` derived from counter dimensions (resolves WGC-0003)
 - [ ] Text positions (`top_left_value`, `top_right_value`) recalculated for 1200
 - [ ] Font size scaled proportionally
 - [ ] Blackhorse insignia transform recalculated: `translate` and `scale` center on 1200×1200
@@ -80,7 +80,7 @@ Decision needed on which approach to use for sheets.
 
 ### Opportunity
 
-This migration is a natural time to resolve BL-0003 (derive offsets from dimensions) and BL-0004 (extract magic numbers), since every hardcoded value must be touched anyway.
+This migration is a natural time to resolve WGC-0003 (derive offsets from dimensions) and WGC-0004 (extract magic numbers), since every hardcoded value must be touched anyway.
 
 ## LLM Context
 

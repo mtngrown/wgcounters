@@ -1,5 +1,5 @@
 ---
-id: BL-0012
+id: WGC-0012
 title: Test Counter base class and background modules
 type: story
 status: done
@@ -12,8 +12,8 @@ owner: dave
 created: 2026-02-28
 updated: 2026-02-28
 completed: 2026-02-28
-parent: BL-0008
-depends_on: [BL-0011]
+parent: WGC-0008
+depends_on: [WGC-0011]
 area: testing
 adr_refs: []
 links: []
@@ -41,9 +41,9 @@ Unit tests exist for `Counter` base class behavior and all background modules. D
 
 ## Notes
 
-### Implementation order (2 of 4 in BL-0008 epic)
+### Implementation order (2 of 4 in WGC-0008 epic)
 
-Second child. Depends on BL-0011 (framework setup). Independent of BL-0013 (subclass tests).
+Second child. Depends on WGC-0011 (framework setup). Independent of WGC-0013 (subclass tests).
 
 ### Testing approach
 
@@ -55,5 +55,5 @@ Background modules are tested here because they're thin mixins — two lines eac
 
 - Files likely affected: spec/counter_spec.rb (new), spec/background_spec.rb (new, or folded into counter_spec)
 - Invariants to preserve: tests should not write to generated/
-- Style constraints: frozen string literals, use SVG matchers from BL-0011
+- Style constraints: frozen string literals, use SVG matchers from WGC-0011
 - Known traps: Counter cannot be instantiated without a color module; use a concrete subclass or anonymous test class
