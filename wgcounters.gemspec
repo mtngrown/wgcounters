@@ -7,7 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = WGCounters::VERSION
   spec.authors       = ['Dave Doolin']
   spec.summary       = 'SVG counter generator for conflict simulation wargames'
-  spec.description   = 'Generates SVG-based counters and counter sheets for conflict simulation wargames, with focus on Vietnam War scenarios.'
+  spec.description   = 'Generates SVG-based counters and counter sheets for ' \
+                       'conflict simulation wargames, with focus on Vietnam War scenarios.'
   spec.homepage      = 'https://github.com/daviddoolin/wgcounters'
   spec.license       = 'MIT'
   spec.required_ruby_version = '>= 4.0'
@@ -20,5 +21,10 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'rubocop', '~> 1.75'
+  spec.add_development_dependency 'rubocop-performance', '~> 1.25'
+  spec.add_development_dependency 'rubocop-rake', '~> 0.7'
+  spec.add_development_dependency 'rubocop-rspec', '~> 3.6'
   spec.add_development_dependency 'simplecov', '~> 0.22'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end

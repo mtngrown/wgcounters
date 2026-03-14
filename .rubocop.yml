@@ -1,0 +1,49 @@
+plugins:
+  - rubocop-performance
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 4.0
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - 'generated/**/*'
+    - 'original/**/*'
+    - 'vendor/**/*'
+
+# Long path data strings are inherent to SVG work
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - 'lib/wgcounters/blackhorse.rb'
+    - 'lib/wgcounters/first_cav.rb'
+
+# Counter classes are naturally descriptive
+Metrics/ClassLength:
+  Exclude:
+    - 'lib/wgcounters/counter.rb'
+
+# SVG path methods have inherent complexity
+Metrics/MethodLength:
+  Max: 20
+
+# Counter subclasses are self-documenting via class name and inheritance
+Style/Documentation:
+  Enabled: false
+
+# Dev dependencies in gemspec is fine for a single-gem project
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+# Spec files live flat in spec/, not nested under wg_counters/
+RSpec/SpecFilePathFormat:
+  Enabled: false
+
+# SVG structural tests naturally assert multiple attributes per example
+RSpec/MultipleExpectations:
+  Max: 5
+
+# Counter and background specs share a file reasonably
+RSpec/MultipleDescribes:
+  Enabled: false
